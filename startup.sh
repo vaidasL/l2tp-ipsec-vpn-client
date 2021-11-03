@@ -1,4 +1,7 @@
 #!/bin/sh
+# cleanup
+rm /etc/ipsec.d/*.db
+rm /var/run/pluto/pluto.pid
 
 # template out all the config files using env vars
 sed -i 's/right=.*/right='$VPN_SERVER_IPV4'/' /etc/ipsec.conf
